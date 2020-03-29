@@ -1,0 +1,838 @@
+<!--
+  Templates leverage Nunjucks, a powerful templating language:
+  https://mozilla.github.io/nunjucks/
+
+  # Don't want to use Nunjucks?
+    It is entirely optional. Feel free to use normal HTML instead!
+-->
+
+<!--
+  Extend the global template
+-->
+{% extends "_template.html" %}
+
+<!--
+  Page content (gets injected into the template)
+-->
+{% block content %}
+
+<div class="slds-grid slds-gutters">
+  <div class="slds-col">
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-account" title="account">
+                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                  <use xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom107"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                  <span>Account</span>
+                </a>
+              </h2>
+            </div>
+            <div class="slds-no-flex">
+              <button class="slds-button slds-button_neutral">View</button>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <div class="slds-map_container" style="height: 80px; width: 40px;">
+            <div class="slds-map">
+              <iframe id="GoogleMapID" title="Google Maps iframe" src="https://www.google.com/maps/embed/v1/place?q=66%20united%2Cstreet%20mandaluyong&amp;key=AIzaSyDliLquGXGts9S8YtkWVolSQEJdBL1ZuWc" style="height: 80px; width: 75%;"></iframe>
+            </div>
+          </div>
+          <br/>
+          <div class="demo-only" style="width:15rem">
+            <article class="slds-tile slds-media">
+              <div class="slds-media__figure">
+                <span class="slds-avatar slds-avatar_circle slds-avatar_large">
+                  <img alt="" src="/assets/images/avatar2.jpg" />
+                </span>
+              </div>
+              <div class="slds-media__body">
+                  <a href="javascript:void(0);" style="font-size: 12pt">United Drugstore Inc</a>
+                <div class="slds-tile__detail">
+                  <dl class="slds-list_horizontal slds-wrap">
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">TGT:</dt>
+                    <dd class="slds-item_detail slds-truncate">Php 1,232,827.00</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">EI:</dt>
+                    <dd class="slds-item_detail slds-truncate">Php 800,00.00
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">MS:</dt>
+                    <dd class="slds-item_detail slds-truncate">2.6</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">SO:</dt>
+                    <dd class="slds-item_detail slds-truncate">Php 340,523.22</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">SI:</dt>
+                    <dd class="slds-item_detail slds-truncate">Php 220,523.22</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">AR:</dt>
+                    <dd class="slds-item_detail slds-truncate">93.33%</dd>
+                    
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">RPS:</dt>
+                    <dd class="slds-item_detail slds-truncate">96.87%</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">IMPL:</dt>
+                    <dd class="slds-item_detail slds-truncate">100% (20/20)</dd>
+                    <dt class="slds-item_label slds-text-color_weak slds-truncate" style="font-weight: bold;">NPD:</dt>
+                    <dd class="slds-item_detail slds-truncate">93.33% (14/15) </dd>
+                  </dl>
+                </div>
+              </div>            
+            </article>
+        </div>
+        <div class="slds-card__footer">
+          <div>
+            <div class="slds-grid slds-grid_align-spread slds-p-bottom_x-small" id="progress-bar-label-id-6">
+              <span>AccountDB</span>
+              <span aria-hidden="true">
+                <strong>80% Complete</strong>
+              </span>
+            </div>
+            <div class="slds-progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-labelledby="progress-bar-label-id-6" role="progressbar">
+              <span class="slds-progress-bar__value" style="width:80%">
+                <span class="slds-assistive-text">Progress: 80%</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="slds-card__footer">
+          <div class="slds-card__body">
+            <ul>
+              <li><button class="slds-button slds-button_brand" style="width: 100%; background-color: #0015ff ;border-color: #0015ff; border-width: 1px;">
+                <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#location"></use>
+                </svg>  
+                Get Location</button>
+              </li>
+              <li><button class="slds-button slds-button_brand" style="width: 100%; margin-top: 5px; background-color: #00a32c; color: #ffffff; border-color: #00a32c; border-width: 1px;">
+                <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#outbound_call"></use>
+                </svg>    
+                Call Now</button>
+              </li>
+              <li><button class="slds-button slds-button_neutral" style="width: 100%; margin-top: 5px; background-color: #c90000; color: #ffffff; border-color: #c90000; border-width: 1px;">
+                <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
+                </svg>  
+                Add to Workplan</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    <!--
+    <article class="slds-card">
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-account" title="account">
+              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+              </svg>
+              <span class="slds-assistive-text">account</span>
+            </span>
+          </div>
+          <div class="slds-media__body">
+            <h2 class="slds-card__header-title">
+              <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                <span>Accounts</span>
+              </a>
+            </h2>
+          </div>
+          <div class="slds-no-flex">
+            <button class="slds-button slds-button_neutral">New</button>
+          </div>
+        </header>
+      </div>
+      <div class="slds-card__body slds-card__body_inner">Anything can go into the card body</div>
+      <footer class="slds-card__footer">
+        <a class="slds-card__footer-action" href="javascript:void(0);">View All
+          <span class="slds-assistive-text">Accounts</span>
+        </a>
+      </footer>
+    </article>
+    -->
+  </div>
+
+  <div class="slds-col slds-size_2-of-4">
+    <article class="slds-card">
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-account" title="account">
+              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#data_integration_hub"></use>
+              </svg>
+              <span class="slds-assistive-text">account</span>
+            </span>
+          </div>
+          <div class="slds-media__body">
+            <h2 class="slds-card__header-title">
+              <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Hub">
+                <span>Hub</span>
+              </a>
+            </h2>
+          </div>
+          <div class="slds-no-flex">
+            <!--Right Side Label/Action after the Panel Title-->
+          </div>
+        </header>
+      </div>
+      <div class="slds-card__body slds-card__body_inner">
+        <div class="slds-grid slds-text-align--center">
+
+          <div class="slds-col">
+            <div class="slds-tile__detail">
+              <dl class="slds-list_vertical slds-wrap">
+                <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                  <span class="slds-icon_container slds-icon-action-description" style="background-color: #ffb700;" title="action">
+                    <a href="blank.html">
+                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#new_opportunity"></use>
+                      </svg>
+                    </a>
+                  </span>
+                </dt>
+                <dd class="slds-item_detail slds-truncate" style="padding-top: 8px;"><a href="blank.html">INSIGHT</a></dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="slds-col">
+            <div class="slds-tile__detail">
+              <dl class="slds-list_vertical slds-wrap">
+                <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                  <span class="slds-icon_container slds-icon-action-description" title="action">
+                    <a href="meta_air.html">
+                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#check"></use>
+                      </svg>
+                    </a>
+                  </span>
+                </dt>
+                <dd class="slds-item_detail slds-truncate" style="padding-top: 8px;"><a href="meta_air.html">AIR</a></dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="slds-col">
+            <div class="slds-tile__detail">
+              <dl class="slds-list_vertical slds-wrap">
+                <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                  <span class="slds-icon_container slds-icon-action-description" style="background-color: #02e3ba;" title="action">
+                    <a href="javascript:void(0);">
+                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#clone"></use>
+                      </svg>
+                    </a>
+                  </span>
+                </dt>
+                <dd class="slds-item_detail slds-truncate" style="padding-top: 8px;"><a href="javascript:void(0);">TAF</a></dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="slds-col">
+            <div class="slds-tile__detail">
+              <dl class="slds-list_vertical slds-wrap">
+                <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                  <span class="slds-icon_container slds-icon-action-description" style="background-color: #ff828f;" title="action">
+                    <a href="meta_col.html">
+                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#update"></use>
+                      </svg>
+                    </a>
+                  </span>
+                </dt>
+                <dd class="slds-item_detail slds-truncate" style="padding-top: 8px;"><a href="meta_col.html">COL</a></dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="slds-col">
+            <div class="slds-tile__detail">
+              <dl class="slds-list_vertical slds-wrap">
+                <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                  <span class="slds-icon_container slds-icon-action-description" style="background-color: #00398a;" title="action">
+                    <a href="meta_ofs.html">
+                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#user_activation"></use>
+                      </svg>
+                    </a>
+                  </span>
+                </dt>
+                <dd class="slds-item_detail slds-truncate" style="padding-top: 8px;"><a href="meta_ofs.html">OFS</a></dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="slds-col">
+            <div class="slds-tile__detail">
+              <dl class="slds-list_vertical slds-wrap">
+                <dt class="slds-item_label slds-text-color_weak slds-truncate">
+                  <span class="slds-icon_container slds-icon-action-description" style="background-color: #838584;" title="action">
+                    <a href="meta_arc.html">
+                      <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#add_file"></use>
+                      </svg>
+                    </a>
+                  </span>
+                </dt>
+                <dd class="slds-item_detail slds-truncate" style="padding-top: 8px;"><a href="meta_arc.html">ARC</a></dd>
+              </dl>
+            </div>
+          </div>
+
+        </div>
+        <div>
+          <ul class="slds-accordion">
+            <li class="slds-accordion__list-item">
+              <section class="slds-accordion__section slds-is-open">
+                <div class="slds-accordion__summary" style="background-color: #e4e8ed; padding: 5px; border-radius: 5px;">
+                  <h3 class="slds-accordion__summary-heading">
+                    <button aria-controls="accordion-details-01" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action">
+                      <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch"></use>
+                      </svg>
+                      <span class="slds-accordion__summary-content" title="Accordion summary">Details</span>
+                    </button>
+                  </h3>
+                </div>
+                <div class="slds-accordion__content" id="accordion-details-01">
+                    <div class="slds-tabs_default">
+                        <ul class="slds-tabs_default__nav" role="tablist">
+                            <li class="slds-tabs_default__item slds-is-active" title="Item One" role="presentation">
+                            <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-default-1" id="tab-default-1__item">Carried SKU</a>
+                            </li>
+                            <li class="slds-tabs_default__item" title="Item Two" role="presentation">
+                            <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item">NEON</a>
+                            </li>
+                            <li class="slds-tabs_default__item" title="Item Three" role="presentation">
+                            <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-3" id="tab-default-3__item">PMIA</a>
+                            </li>
+                            <li class="slds-tabs_default__item" title="Item Four" role="presentation">
+                            <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-4" id="tab-default-4__item">VISI</a>
+                            </li>
+                        </ul>
+                        <div id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+                            <div class="slds-form">
+                                <div class="slds-form-element slds-form-element_stacked">
+                                    <label class="slds-form-element__label" for="stacked-input-id-01">Filter</label>
+                                    <div class="slds-form-element__control">
+                                    <input type="text" id="stacked-input-id-01" placeholder="+ Filter By Company, GLU, Division, Brand Group" class="slds-input" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Start of Carried SKU-->
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Item</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">UOM</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">EI</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">SO</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Qty</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Stock Availability</div>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">BIOGESIC 500MG CAP 100 SS PH - 156143</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">PCS</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">300</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">30</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="text" id="stacked-input-id-01" placeholder="" class="slds-input" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">BIOGESIC 500MG CAP 100 SS PH - 156143</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">BOX</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="text" id="stacked-input-id-01" placeholder="" class="slds-input" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">BIOGESIC 500MG CAP 100 SS PH - 156143</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">CS</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="text" id="stacked-input-id-01" placeholder="" class="slds-input" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">ALAXAN FR CAP 100 SS PH - 156143</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">BOX</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="text" id="stacked-input-id-01" placeholder="" class="slds-input" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">ALAXAN FR CAP 100 SS PH - 156143</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">CS</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">0</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="text" id="stacked-input-id-01" placeholder="" class="slds-input" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--End of Carried SKU-->
+                        </div>
+                        <div id="tab-default-2" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-2__item">
+                            <div class="slds-form">
+                                <div class="slds-form-element slds-form-element_stacked">
+                                    <label class="slds-form-element__label" for="stacked-input-id-01">Filter</label>
+                                    <div class="slds-form-element__control">
+                                    <input type="text" id="stacked-input-id-01" placeholder="+ Filter By Company, GLU, Division, Brand Group" class="slds-input" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Start of NPD-->
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Item</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Score</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Stock Availability</div>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">FOCALE CAP 100 SS PH - 156143</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">0%</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">NUTRIBEST STRAWBERRY 1 CAN SS PH - 156143</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">0%</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--End of NPD-->
+                        </div>
+                        <div id="tab-default-3" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-3__item">
+                            <div class="slds-form">
+                                <div class="slds-form-element slds-form-element_stacked">
+                                    <label class="slds-form-element__label" for="stacked-input-id-01">Filter</label>
+                                    <div class="slds-form-element__control">
+                                    <input type="text" id="stacked-input-id-01" placeholder="+ Filter By Company, GLU, Division, Brand Group" class="slds-input" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Start of PMIA-->
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                                <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Initiative</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Type</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Allocation</div>
+                                    </th>
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate">Stock Availability</div>
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">MYRA 400IU 10+2</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">In-Store Bundling</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">50</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">LACTEZIN PACK OF 8</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">Pre-Bundled</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">100</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">BIOGESIC 10+2 1 PACK SS PH</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">Pre-Bundled</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">100</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="slds-hint-parent">
+                                    <th scope="row">
+                                        <div class="slds-truncate">
+                                            <a href="javascript:void(0);" tabindex="-1">NEOZEP STANDEE</a>
+                                        </div>
+                                    </th>
+                                    <td>
+                                        <div class="slds-truncate">Merchandising</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">1</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-truncate">
+                                            <input type="checkbox" name="options" id="checkbox-unique-id-305" value="checkbox-unique-id-305" tabindex="0" aria-labelledby="check-select-all-label column-group-header" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--End of PMIA-->
+                        </div>
+                        <div id="tab-default-4" class="slds-tabs_default__content slds-hide" role="tabpanel" aria-labelledby="tab-default-4__item">
+                            <div class="slds-form">
+                                <div class="slds-form-element slds-form-element_stacked">
+                                    <label class="slds-form-element__label" for="stacked-input-id-01">Filter</label>
+                                    <div class="slds-form-element__control">
+                                    <input type="text" id="stacked-input-id-01" placeholder="+ Filter By Company, GLU, Division, Brand Group" class="slds-input" />
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Start of VISI-->
+                            <label class="slds-form-element__label" for="stacked-input-id-01">Visibility Standards</label>
+                            <!--End of VISI-->
+                        </div>
+                    </div>
+                </div>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </article>
+  </div>
+
+  <div class="slds-col" style="width: 19rem;">
+
+    <!--Additional Info Panel 3.2.1-->
+    <article class="slds-card">
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-standard-account" title="account">
+              <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#shift"></use>
+              </svg>
+              <span class="slds-assistive-text">Notication</span>
+            </span>
+          </div>
+          <div class="slds-media__body">
+            <h2 class="slds-card__header-title">
+              <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                <span>Task Reminders</span>
+              </a>
+            </h2>
+          </div>
+          <div class="slds-no-flex">
+            <button class="slds-button slds-button_neutral">New</button>
+          </div>
+        </header>
+      </div>
+      <div class="slds-card__body slds-card__body_inner">
+        <!--Notication Panel 3.1.1-->
+        <div style="height:16%;">
+          <div aria-live="assertive" aria-atomic="true" class="slds-assistive-text">event notification: NPD Memo & Sample</div>
+          <section class="slds-notification slds-size_3-of-3" role="dialog" aria-labelledby="noti52" aria-describedby="dialog-body-id-43">
+            <div class="slds-notification__body" id="dialog-body-id-43">
+              <a class="slds-notification__target slds-media" href="javascript:void(0);">
+                <span class="slds-icon_container slds-icon-standard-event slds-media__figure" style="background-color: #0059ff;" title="event">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#rtc_presence"></use>
+                  </svg>
+                </span>
+                <div class="slds-media__body">
+                  <h2 class="slds-text-heading_small slds-m-bottom_xx-small" id="noti52">
+                    <span class="slds-assistive-text">event notification:</span>NPD Memo & Sample</h2>
+                  <p>Created at  Mar 17, 2020</p>
+                </div>
+              </a>
+              <button class="slds-button slds-button_icon slds-button_icon-container slds-notification__close" title="Dismiss notification">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Dismiss notification</span>
+              </button>
+            </div>
+          </section>
+        </div>
+        <div style="height:20%; padding-top: 10px;">
+          <div aria-live="assertive" aria-atomic="true" class="slds-assistive-text">event notification: Check the Neozep 5+1 ISB</div>
+          <section class="slds-notification slds-size_3-of-3" role="dialog" aria-labelledby="noti52" aria-describedby="dialog-body-id-43">
+            <div class="slds-notification__body" id="dialog-body-id-43">
+              <a class="slds-notification__target slds-media" href="javascript:void(0);">
+                <span class="slds-icon_container slds-icon-standard-event slds-media__figure" style="background-color:#d90707;" title="event">
+                  <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                    <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#visit_templates"></use>
+                  </svg>
+                </span>
+                <div class="slds-media__body">
+                  <h2 class="slds-text-heading_small slds-m-bottom_xx-small" id="noti52">
+                    <span class="slds-assistive-text">event notification:</span>Check the Neozep 5+1 ISB</h2>
+                  <p>Created at  Mar 15, 2020</p>
+                  <p>Created by  Juan Dela Cruz</p>
+                </div>
+              </a>
+              <button class="slds-button slds-button_icon slds-button_icon-container slds-notification__close" title="Dismiss notification">
+                <svg class="slds-button__icon" aria-hidden="true">
+                  <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close"></use>
+                </svg>
+                <span class="slds-assistive-text">Dismiss notification</span>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <footer class="slds-card__footer">
+        <a class="slds-card__footer-action" href="javascript:void(0);">View All
+          <span class="slds-assistive-text">Accounts</span>
+        </a>
+      </footer>
+    </article>
+    <!--Additional Info Panel 3.3.1-->
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+              <span class="slds-icon_container slds-icon-standard-account" title="account">
+                <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                  <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#bot"></use>
+                </svg>
+                <span class="slds-assistive-text">Notication</span>
+              </span>
+            </div>
+            <div class="slds-media__body">
+              <h2 class="slds-card__header-title">
+                <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="Accounts">
+                  <span>Chatter</span>
+                </a>
+              </h2>
+            </div>
+            <div class="slds-no-flex">
+              <button class="slds-button slds-button_neutral">New</button>
+            </div>
+          </header>
+        </div>
+        <div class="slds-card__body slds-card__body_inner">
+          <section role="log" class="slds-chat">
+            <ul class="slds-chat-list">
+              <li class="slds-chat-listitem slds-chat-listitem_bookend">
+                <div class="slds-chat-bookend">
+                  <span class="slds-icon_container slds-icon-utility-chat slds-chat-icon">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chat"></use>
+                    </svg>
+                  </span>
+                  <p>Chat started by
+                    <b>Andy Martinez</b> • 4:58 PM</p>
+                </div>
+              </li>
+              <li class="slds-chat-listitem slds-chat-listitem_outbound">
+                <div class="slds-chat-message">
+                  <div class="slds-chat-message__body">
+                    <div class="slds-chat-message__text slds-chat-message__text_outbound">
+                      <span>Hi Andy, my name is Amber and I can help you solve your issue.</span>
+                    </div>
+                    <div class="slds-chat-message__meta" aria-label="said Amber Cann at 5:23 PM">Amber Cann • 5:23 PM</div>
+                  </div>
+                </div>
+              </li>
+              <li class="slds-chat-listitem slds-chat-listitem_bookend">
+                <div class="slds-chat-bookend slds-chat-bookend_stop">
+                  <span class="slds-icon_container slds-icon-utility-end_chat slds-chat-icon">
+                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#end_chat"></use>
+                    </svg>
+                  </span>
+                  <p>Chat ended by
+                    <b>Andy Martinez</b> • 5:30 PM</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <footer class="slds-card__footer">
+          <a class="slds-card__footer-action" href="javascript:void(0);">View All
+            <span class="slds-assistive-text">Accounts</span>
+          </a>
+        </footer>
+    </article>
+  </div>
+</div>
+
+<!--
+<h2 class="slds-text-align--center slds-text-heading--large slds-m-around--large">
+  TEST
+</h2>
+-->
+
+{% endblock %}
